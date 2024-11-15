@@ -38,10 +38,10 @@ const theme = (settings: Settings, mode: SystemMode, direction: Theme['direction
     typography: typography(inter.style.fontFamily),
     customShadows: customShadows(mode),
     mainColorChannels: {
-      light: '46 38 61',
-      dark: '231 227 252',
-      lightShadow: '46 38 61',
-      darkShadow: '19 17 32'
+      light: '147 213 0',  // Corresponde al nuevo verde (#93D500) en el modo claro
+      dark: '241 244 217',  // Ajuste suave de sombra para el verde en modo oscuro
+      lightShadow: '147 213 0',  // Sombra del verde claro
+      darkShadow: '77 88 40' // Tono de sombra profundo para armonía visual en modo oscuro
     }
   } as Theme
 }

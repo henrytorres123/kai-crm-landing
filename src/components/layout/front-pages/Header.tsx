@@ -7,11 +7,10 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 // MUI Imports
-import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
+import type { Theme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
-import type { Theme } from '@mui/material/styles'
 
 // Third-party Imports
 import classnames from 'classnames'
@@ -21,15 +20,15 @@ import type { Mode } from '@core/types'
 
 // Component Imports
 import Logo from '@components/layout/shared/Logo'
-import ModeDropdown from '@components/layout/shared/ModeDropdown'
 import FrontMenu from './FrontMenu'
-import CustomIconButton from '@core/components/mui/IconButton'
 
 // Util Imports
 import { frontLayoutClasses } from '@layouts/utils/layoutClasses'
 
 // Styles Imports
+import LanguageDropdown from '../shared/LanguageDropdown'
 import styles from './styles.module.css'
+import ModeDropdown from '../shared/ModeDropdown'
 
 const Header = ({ mode }: { mode: Mode }) => {
   // States
@@ -53,43 +52,22 @@ const Header = ({ mode }: { mode: Mode }) => {
               <IconButton onClick={() => setIsDrawerOpen(true)} className='-mis-2'>
                 <i className='ri-menu-line text-textPrimary' />
               </IconButton>
-              <Link href='/front-pages/landing-page'>
+              <Link href='/landing'>
                 <Logo />
               </Link>
               <FrontMenu mode={mode} isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
             </div>
           ) : (
             <div className='flex items-center gap-10'>
-              <Link href='/front-pages/landing-page'>
+              <Link href='/landing'>
                 <Logo />
               </Link>
               <FrontMenu mode={mode} isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
             </div>
           )}
           <div className='flex items-center gap-2 sm:gap-4'>
+            <LanguageDropdown />
             <ModeDropdown />
-            {isBelowLgScreen ? (
-              <CustomIconButton
-                component={Link}
-                variant='contained'
-                href='https://themeselection.com/item/materio-mui-nextjs-admin-template/'
-                color='primary'
-                target='_blank'
-              >
-                <i className='ri-shopping-cart-line text-xl' />
-              </CustomIconButton>
-            ) : (
-              <Button
-                component={Link}
-                variant='contained'
-                href='https://themeselection.com/item/materio-mui-nextjs-admin-template/'
-                startIcon={<i className='ri-shopping-cart-line text-xl' />}
-                className='whitespace-nowrap'
-                target='_blank'
-              >
-                Purchase Now
-              </Button>
-            )}
           </div>
         </div>
       </div>

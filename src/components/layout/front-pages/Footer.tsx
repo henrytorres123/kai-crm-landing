@@ -78,17 +78,6 @@ const Footer = () => {
                   </Typography>
                   <Chip label='New' color='primary' size='small' />
                 </Link>
-                <Typography
-                  component={Link}
-                  href='/pages/misc/under-maintenance'
-                  color='white'
-                  className='opacity-[0.78]'
-                >
-                  Maintenance
-                </Typography>
-                <Typography component={Link} href='/pages/misc/coming-soon' color='white' className='opacity-[0.78]'>
-                  Coming Soon
-                </Typography>
               </div>
             </Grid>
             <Grid item xs={12} sm={3} lg={2}>
@@ -96,17 +85,8 @@ const Footer = () => {
                 Products
               </Typography>
               <div className='flex flex-col gap-4'>
-                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[0.78]'>
-                  Page builder
-                </Typography>
-                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[0.78]'>
-                  Admin Dashboards
-                </Typography>
-                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[0.78]'>
+                <Typography component={Link} href='/landing' color='white' className='opacity-[0.78]'>
                   UI Kits
-                </Typography>
-                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[0.78]'>
-                  Illustrations
                 </Typography>
               </div>
             </Grid>

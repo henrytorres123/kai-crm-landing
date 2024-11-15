@@ -21,6 +21,13 @@ import '@/app/globals.css'
 
 // Generated Icon CSS Imports
 import '@assets/iconify-icons/generated-icons.css'
+import Providers from '@/components/Providers'
+import BlankLayout from '@/@layouts/BlankLayout'
+import { IntersectionProvider } from '@/contexts/intersectionContext'
+import FrontLayout from '@/components/layout/front-pages'
+import ScrollToTop from '@/@core/components/scroll-to-top'
+import { Button } from '@mui/material'
+import { getSystemMode } from '@/@core/utils/serverHelpers'
 
 export const metadata = {
   title: 'Materio - Material Design Next.js Admin Template',
@@ -32,11 +39,30 @@ const RootLayout = ({ children, params }: ChildrenType & { params: { lang: Local
   // Vars
   const headersList = headers()
   const direction = i18n.langDirection[params.lang]
+  const systemMode = getSystemMode()
 
   return (
     <TranslationWrapper headersList={headersList} lang={params.lang}>
       <html id='__next' lang={params.lang} dir={direction}>
-        <body className='flex is-full min-bs-full flex-auto flex-col'>{children}</body>
+        <body className='flex is-full min-bs-full flex-auto flex-col'>
+          <Providers direction='ltr'>
+            <BlankLayout systemMode={systemMode}>
+              <IntersectionProvider>
+                <FrontLayout>
+                  {children}
+                  <ScrollToTop className='mui-fixed'>
+                    <Button
+                      variant='contained'
+                      className='is-10 bs-10 rounded-full p-0 min-is-0 flex items-center justify-center'
+                    >
+                      <i className='ri-arrow-up-line' />
+                    </Button>
+                  </ScrollToTop>
+                </FrontLayout>
+              </IntersectionProvider>
+            </BlankLayout>
+          </Providers>
+        </body>
       </html>
     </TranslationWrapper>
   )
