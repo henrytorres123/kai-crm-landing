@@ -23,7 +23,7 @@ import frontCommonStyles from '@views/front-pages/styles.module.css'
 const Footer = () => {
   return (
     <footer className={frontLayoutClasses.footer}>
-      <div className='relative'>
+      <div className='bg-backgroundPaper'>
         <img
           src='/images/front-pages/footer-bg.png'
           alt='footer bg'
@@ -126,7 +126,7 @@ const Footer = () => {
           </Grid>
         </div>
       </div>
-      <div className='bg-[#211B2C]'>
+      <div className='bg-backgroundDefault'>
         <div
           className={classnames(
             'flex flex-wrap items-center justify-center sm:justify-between gap-4 plb-[15px]',

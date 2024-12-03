@@ -9,9 +9,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
     light: {
       palette: {
         primary: {
-          main: '#93D500', // Verde principal, fresco y moderno
-          light: '#A8DF33', // Verde más claro, para resaltar o usar en hover
-          dark: '#7EB000', // Verde oscuro, útil para texto sobre fondos claros
+          main: '#4D5B69', // Verde principal, fresco y moderno
+          light: '#7A8D99', // Verde más claro, para resaltar o usar en hover
+          dark: '#3A4755', // Verde oscuro, útil para texto sobre fondos claros
           lighterOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.16)',
           mainOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.24)',
@@ -83,8 +83,8 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
         divider: `rgb(var(--mui-mainColorChannels-light) / 0.12)`,
         dividerChannel: 'var(--mui-mainColorChannels-light)',
         background: {
-          default: skin === 'bordered' ? '#FFFFFF' : '#F4F5FA',
-          paper: '#FFFFFF'
+          default: skin === 'bordered' ? '#F5F5F5' : '#ECEFF1',
+          paper: '#F5F5F5'
         },
         action: {
           active: `rgb(var(--mui-mainColorChannels-light) / 0.6)`,
@@ -242,8 +242,8 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
         divider: `rgb(var(--mui-mainColorChannels-dark) / 0.12)`,
         dividerChannel: 'var(--mui-mainColorChannels-dark)',
         background: {
-          default: skin === 'bordered' ? '#312D4B' : '#28243D',
-          paper: '#312D4B'
+          default: skin === 'bordered' ? '#121212' : '#1E1E1E',
+          paper: '#121212'
         },
         action: {
           active: `rgb(var(--mui-mainColorChannels-dark) / 0.6)`,
@@ -319,7 +319,7 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           greyLightBg: '#373350',
           inputBorder: `rgb(var(--mui-mainColorChannels-dark) / 0.22)`,
           tableHeaderBg: '#3D3759',
-          tooltipText: '#312D4B',
+          tooltipText: '#121212',
           trackBg: '#474360'
         }
       }

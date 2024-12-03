@@ -73,7 +73,7 @@ const Logo = ({ color }: { color?: CSSProperties['color'] }) => {
 
   return (
     <div className='flex items-center min-bs-[24px]'>
-      <Image alt='logo' src={'/images/front-pages/kai-crm/kailogo-gb.png'} width={'90'} height={'50'} />
+      <Image alt='logo' src={'/images/front-pages/kai-crm/kailogo-gbw.png'} width={'90'} height={'50'} />
       {/* <LogoText
         color={color}
         ref={logoTextRef}

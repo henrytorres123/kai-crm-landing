@@ -16,7 +16,7 @@ import frontCommonStyles from '@views/front-pages/styles.module.css'
 
 const GetStarted = () => {
   return (
-    <section className='relative'>
+    <section className='bg-backgroundPaper'>
       <img
         src='/images/front-pages/landing-page/get-started-bg.png'
         alt='background-image'

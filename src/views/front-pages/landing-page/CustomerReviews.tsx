@@ -179,7 +179,7 @@ const CustomerReviews = () => {
   }
 
   return (
-    <section className='flex flex-col gap-16 plb-[100px]'>
+    <section className='flex flex-col gap-16 plb-[100px] bg-backgroundDefault'>
       <div className={classnames('flex flex-col items-center justify-center', frontCommonStyles.layoutSpacing)}>
         <div className='flex items-center justify-center mbe-6 gap-3'>
           <Lines />
