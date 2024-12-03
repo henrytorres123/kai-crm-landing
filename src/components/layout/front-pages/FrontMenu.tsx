@@ -4,15 +4,15 @@
 import { useEffect } from 'react'
 
 // Next Imports
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 // MUI Imports
-import Typography from '@mui/material/Typography'
 import Drawer from '@mui/material/Drawer'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import type { Theme } from '@mui/material/styles'
 import IconButton from '@mui/material/IconButton'
+import type { Theme } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 // Third-party Imports
 import classnames from 'classnames'
@@ -24,7 +24,6 @@ import type { Mode } from '@core/types'
 import { useIntersection } from '@/hooks/useIntersection'
 
 // Component Imports
-import DropdownMenu from './DropdownMenu'
 
 type Props = {
   mode: Mode
@@ -72,7 +71,7 @@ const Wrapper = (props: WrapperProps) => {
 
 const FrontMenu = (props: Props) => {
   // Props
-  const { isDrawerOpen, setIsDrawerOpen, mode } = props
+  const { isDrawerOpen, setIsDrawerOpen } = props
 
   // Hooks
   const pathname = usePathname()

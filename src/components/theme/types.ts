@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /*
  ! This file is for adding custom types to the MUI theme, components and props.
  ! Please do not remove anything from this file as it may break the application.
@@ -8,14 +9,9 @@
  */
 
 // MUI Imports
+// import { lighten, styled } from '@mui/material/styles' sobreescribe lo anterior no borrar
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { ComponentsOverrides } from '@mui/material/styles'
-
-// Type Imports
-import type {
-  CustomInputHorizontalProps,
-  CustomInputVerticalProps,
-  CustomInputImgProps
-} from '@core/components/custom-inputs/types'
 
 declare module '@mui/material/styles' {
   // eslint-disable-next-line lines-around-comment
@@ -116,27 +112,6 @@ declare module '@mui/material/styles' {
     MuiCustomInputHorizontal: 'root' | 'title' | 'meta' | 'content' | 'input'
     MuiCustomInputVertical: 'root' | 'title' | 'content' | 'input'
     MuiCustomImage: 'root' | 'image' | 'input'
-  }
-
-  interface ComponentsPropsList {
-    MuiCustomInputHorizontal: CustomInputHorizontalProps
-    MuiCustomInputVertical: CustomInputVerticalProps
-    MuiCustomImage: CustomInputImgProps
-  }
-
-  interface Components {
-    MuiCustomInputHorizontal?: {
-      defaultProps?: ComponentsPropsList['MuiCustomInputHorizontal']
-      styleOverrides?: ComponentsOverrides<Theme>['MuiCustomInputHorizontal']
-    }
-    MuiCustomInputVertical?: {
-      defaultProps?: ComponentsPropsList['MuiCustomInputVertical']
-      styleOverrides?: ComponentsOverrides<Theme>['MuiCustomInputVertical']
-    }
-    MuiCustomImage?: {
-      defaultProps?: ComponentsPropsList['MuiCustomImage']
-      styleOverrides?: ComponentsOverrides<Theme>['MuiCustomImage']
-    }
   }
 }
 

@@ -19,6 +19,7 @@ import themeConfig from '@configs/themeConfig'
 // Hook Imports
 import useVerticalNav from '@menu/hooks/useVerticalNav'
 import { useSettings } from '@core/hooks/useSettings'
+import Image from 'next/image'
 
 type LogoTextProps = {
   isHovered?: VerticalNavContextProps['isHovered']
@@ -72,8 +73,8 @@ const Logo = ({ color }: { color?: CSSProperties['color'] }) => {
 
   return (
     <div className='flex items-center min-bs-[24px]'>
-      <MaterioLogo className='text-[22px] text-primary' />
-      <LogoText
+      <Image alt='logo' src={'/images/front-pages/kai-crm/kailogo-gb.png'} width={'90'} height={'50'} />
+      {/* <LogoText
         color={color}
         ref={logoTextRef}
         isHovered={isHovered}
@@ -82,7 +83,7 @@ const Logo = ({ color }: { color?: CSSProperties['color'] }) => {
         isBreakpointReached={isBreakpointReached}
       >
         {themeConfig.templateName}
-      </LogoText>
+      </LogoText> */}
     </div>
   )
 }

@@ -3,12 +3,11 @@ import { headers } from 'next/headers'
 
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css'
+import { Button } from '@mui/material'
 
 // Type Imports
 import type { ChildrenType } from '@core/types'
 import type { Locale } from '@configs/i18n'
-
-// Component Imports
 
 // HOC Imports
 import TranslationWrapper from '@/hocs/TranslationWrapper'
@@ -18,15 +17,18 @@ import { i18n } from '@configs/i18n'
 
 // Style Imports
 import '@/app/globals.css'
-
-// Generated Icon CSS Imports
 import '@assets/iconify-icons/generated-icons.css'
+
+// Component Imports
 import Providers from '@/components/Providers'
 import BlankLayout from '@/@layouts/BlankLayout'
-import { IntersectionProvider } from '@/contexts/intersectionContext'
 import FrontLayout from '@/components/layout/front-pages'
 import ScrollToTop from '@/@core/components/scroll-to-top'
-import { Button } from '@mui/material'
+
+// Context Imports
+import { IntersectionProvider } from '@/contexts/intersectionContext'
+
+// Utility Imports
 import { getSystemMode } from '@/@core/utils/serverHelpers'
 
 export const metadata = {
